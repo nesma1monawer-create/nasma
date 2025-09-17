@@ -1,9 +1,8 @@
 backend:
-  name: github
-  repo: rodri-go123/nasma
-  branch: main 
-  auth_type: token
-  token: ${DECAP_CMS_GITHUB_TOKEN}
+  name: git-gateway
+  branch: staging
+
+local_backend: true
 
 media_folder: "content/uploads"   # where uploaded files are stored in the repo
 public_folder: "/uploads"         # how those files are served on the site
