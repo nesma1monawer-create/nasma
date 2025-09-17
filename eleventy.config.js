@@ -10,6 +10,9 @@ import implicitFigures from "markdown-it-implicit-figures";
 
 export default function (eleventyConfig) {
 
+    // copy decap admin files to the output folder
+    eleventyConfig.addPassthroughCopy("admin");
+
 	// run local server
 	  eleventyConfig.setServerOptions({
 		port: 8080,         // or your desired port
