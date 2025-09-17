@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: rodri-go123/nasma
+  branch: main 
+  auth_type: token
+  token: ${DECAP_CMS_GITHUB_TOKEN}
+
+media_folder: "content/uploads"   # where uploaded files are stored in the repo
+public_folder: "/uploads"         # how those files are served on the site
+
+collections:
+  # Landing page
+  - name: "landing"
+    label: "Landing Page"
+    files:
+      - file: "content/landing/landing.md"
+        label: "Landing Content"
+        name: "landing"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  # About page
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "content/about/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  # Contact page
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - file: "content/contact/contact.md"
+        label: "Contact Content"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  # Projects (folder-based)
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true           # allow creating new project entries
+    slug: "{{year}}-{{month}}-{{slug}}"   # folder name format
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
