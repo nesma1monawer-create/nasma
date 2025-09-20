@@ -1,0 +1,14 @@
+title: Nasma's Portfolio :)
+nav:
+  - label: About
+    url: /about
+  - label: Contact
+    url: /contact
+footer:
+  text: Get in touch
+  links:
+    - label: Email
+      url: mailto:example@example.com
+    - label: GitHub
+      url: https://github.com/example-user
+  info: © 2024 Nasma. All rights reserved.

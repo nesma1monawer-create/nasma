@@ -1,0 +1,32 @@
+// image sizes
+figure {
+    margin: 20px 0px;
+    padding: 0;
+}
+
+figure > img {
+    width: 100%;
+}
+
+figure .extra-large {
+  width: 85%;
+}
+
+figure .large {
+  width: 65%;
+}
+
+figure .medium {
+  width: 50%;
+}
+
+figure .small {
+  width: 35%;
+}
+
+// image captions
+
+figcaption {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}

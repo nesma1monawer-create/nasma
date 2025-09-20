@@ -1,8 +1,7 @@
 import * as sass from 'sass';
-import fs from 'fs';
 import path from 'path';
+import YAML from "yaml";
 
-// add some extra fluff to the markdown
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import implicitFigures from "markdown-it-implicit-figures";
@@ -15,7 +14,7 @@ export default function (eleventyConfig) {
 
 	// run local server
 	  eleventyConfig.setServerOptions({
-		port: 8080,         // or your desired port
+		port: 8080,         
 		showAllHosts: true  // allow access from local network
 	});
 
@@ -31,6 +30,36 @@ export default function (eleventyConfig) {
 		},
 	});
 
+    // Read YAML files in the _data folder
+    eleventyConfig.addDataExtension("yml", (contents) => YAML.parse(contents));
+
+    // Custom image rendering:
+    
+    // **********************************
+    // Copy original uploads (for CMS preview)
+    eleventyConfig.addPassthroughCopy({
+        "content/uploads": "uploads"
+    });
+
+    // Copy processed images (overwrites originals on the public site when used)
+    eleventyConfig.addPassthroughCopy({
+        "content/uploads/_processed": "uploads"
+    });
+
+    // convert any image path to a .webp path
+    eleventyConfig.addFilter("toWebp", (src) => {
+        if (!src) return src;
+
+        const ext = path.extname(src);             // ".jpg"
+        const basename = path.basename(src, ext);  // "blue"
+        const dir = path.dirname(src);             // "/uploads"
+
+        // swap extension to .webp
+        return path.join(dir, `${basename}.webp`).replace(/\\/g, "/");
+    });
+    // **********************************
+
+    // Add some fluff to the markdown
     eleventyConfig.setLibrary(
         "md",
         markdownIt({ html: true })
@@ -50,51 +79,13 @@ export default function (eleventyConfig) {
 
             if (srcIndex >= 0) {
                 let src = token.attrs[srcIndex][1];
-
-                // If no folder is present, assume global uploads
-                if (!src.includes("/")) {
-                src = "uploads/" + src;
-                }
-
-                // Use .webp for all images
-                if (!src.toLowerCase().endsWith(".webp")) {
-                src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-                }
-
-                token.attrs[srcIndex][1] = src;
+                token.attrs[srcIndex][1] = eleventyConfig.getFilter("toWebp")(src);
             }
 
             return defaultRender(tokens, idx, options, env, self);
             };
         })
-  );
-
-  // Copy processed images from uploads/_processed to _site/uploads
-  eleventyConfig.addPassthroughCopy({
-    "content/uploads/_processed": "uploads"
-  });
-
-  // After build: remove original JPG/PNG images from _site/uploads
-  eleventyConfig.on("afterBuild", () => {
-    const uploadsDir = "_site/uploads";
-
-    if (!fs.existsSync(uploadsDir)) return;
-
-    const removeOriginals = (dir) => {
-      fs.readdirSync(dir).forEach((file) => {
-        const fullPath = path.join(dir, file);
-        const stat = fs.statSync(fullPath);
-
-        if (stat.isDirectory()) {
-          removeOriginals(fullPath);
-        } else if (/\.(jpe?g|png)$/i.test(file)) {
-          fs.unlinkSync(fullPath);
-        }
-      });
-    };
-
-    removeOriginals(uploadsDir);
-  });
+    );
 
 	return {
 		dir: {

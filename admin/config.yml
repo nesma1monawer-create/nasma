@@ -8,6 +8,37 @@ media_folder: "content/uploads"   # where uploaded files are stored in the repo
 public_folder: "/uploads"         # how those files are served on the site
 
 collections:
+
+  # Header and Footer settings
+  - name: "settings"
+    label: "Header and Footer"
+    files:
+      - label: "⚙️ Header (navigation) and Footer Settings"
+        name: "site"
+        file: "./_data/site.yml"
+        fields:
+          # Header
+          - { label: "Site Title", name: "title", widget: "string" }
+          - label: "Navigation"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          # Footer
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Site information", name: "info", widget: "string" }
+
   # Landing page
   - name: "landing"
     label: "Landing Page"
@@ -45,14 +76,26 @@ collections:
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
-    create: true           # allow creating new project entries
-    slug: "{{year}}-{{month}}-{{slug}}"   # folder name format
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
     extension: "md"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
+      - { label: "🖼️ Page Layout (DON'T CHANGE)", name: "layout", widget: "hidden", default: "_pages/project_page.njk" }
+
+      - { label: "📌 Project Title", name: "title", widget: "string" }
+      - { label: "✏️ Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "ℹ️ Info Tag", name: "info", widget: "string", required: false }
+
+      - { label: "📅 Year", name: "year", widget: "number", value_type: "int" }
+      - { label: "📆 Full Date (sorting)", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+
+      - label: "🖼️ Thumbnail Image"
+        name: "thumbnail"
+        widget: "image" 
+        hint: "Upload or select the main project image."
+
+      - { label: "✏️ Image Description (for accessibility)", name: "imageAlt", widget: "string"}
+
+      - { label: "📏 Highlight?", name: "highlight", widget: "boolean", default: false }
+
+      - { label: "👋 Project Content", name: "body", widget: "markdown" }
