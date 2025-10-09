@@ -5,4 +5,114 @@ css:
   - /styles/_project_page.css
 ---
 
-{{ content | safe }}
+{# slideshow #}
+{% if gallery %}
+  <script type="module" src="/scripts/slideshow.js"></script>
+  <div class="slideshow-container flex-center main-section">
+    <div class="slideshow-fade fade-left"></div>
+    <button class="slideshow-btn prev" aria-label="Previous">&larr;</button>
+
+    <div class="slideshow-wrapper">
+      <div class="slideshow" id="slideshow">
+        {% for image in gallery %}
+          <figure class="slide
+        {% if loop.first %}first{% endif %}
+        {% if loop.last %}last{% endif %}">
+            <img src="{{ image.image }}" alt="{{ image.caption | default('') }}">
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="slideshow-fade fade-right"></div>
+    <button class="slideshow-btn next" aria-label="Next">&rarr;</button>
+  </div>
+{% endif %}
+
+<div class="project-head-container flex-center">
+  <div class="project-head-wrapper full-width head-{{ headerLayout }}">
+
+    {% if not gallery %}
+      <div class="pr-page-pic-wrapper"><img class="pr-page-pic" src="{{thumbnail | toWebp}}" alt="{{ imageAlt }}"></div>
+    {% endif %}
+
+    <div class="project-head">
+      <h1 class="pr-page-title">{{ title }}</h1>
+      <h2 class="pr-page-subtitle">{{ subtitle }}</h2>
+      <p class="pr-page-info">{{ info }}, {{year}}</p>
+      {% if projectDescription %}<p class="pr-page-description">{{ projectDescription }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="project-content-container flex-center main-section">
+  <div class="project-content-wrapper full-width">
+    {{ content | safe }}
+
+<div class="section">
+  <h1>Team</h1>
+  <h3>People who worked on this project</h3>
+
+  <div class="card-grid">
+    <div class="card card-narrow">
+      <div class="card-image">
+        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
+      </div>
+      <div class="card-body">
+        <h2>Jane Doe</h2>
+        <h3>Head of nice things</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+
+    <div class="card card-narrow">
+      <div class="card-image">
+        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
+      </div>
+      <div class="card-body">
+        <h2>Jane Doe</h2>
+        <h3>Head of nice things</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+
+    <div class="card card-narrow">
+      <div class="card-image">
+        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
+      </div>
+      <div class="card-body">
+        <h2>Jane Doe</h2>
+        <h3>Head of nice things</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+
+    <div class="card card-narrow">
+      <div class="card-image">
+        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
+      </div>
+      <div class="card-body">
+        <h2>Jane Doe</h2>
+        <h3>Head of nice things</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+
+    <div class="card card-wide">
+      <div class="card-image">
+        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
+      </div>
+      <div class="card-body">
+        <h2>Jane Doe</h2>
+        <h3>Head of nice things</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

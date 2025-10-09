@@ -44,33 +44,42 @@ collections:
     label: "Landing Page"
     files:
       - file: "content/landing/landing.md"
-        label: "Landing Content"
+        label: "Landing Page Content"
         name: "landing"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Highlighted Project"
+                name: "highlighted"
+                widget: "object"
+                fields:
+                  - { label: "Background Color", name: "background", widget: "color", default: "#fffd8c" }
 
-  # About page
-  - name: "about"
-    label: "About Page"
-    files:
-      - file: "content/about/about.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+              - label: "About"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "About Text", name: "body", widget: "text" }
+                  - { label: "Contact Header", name: "contactHeading", widget: "string" }
+                  - label: "Contact Information"
+                    name: "contactInfo"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "label", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+                  - { label: "Background Color", name: "background", widget: "color", default: "#ffffff" }
 
-  # Contact page
-  - name: "contact"
-    label: "Contact Page"
-    files:
-      - file: "content/contact/contact.md"
-        label: "Contact Content"
-        name: "contact"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+              - label: "Portfolio"
+                name: "portfolio"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Background Color", name: "background", widget: "color", default: "#ffffff" }
 
   # Projects (folder-based)
   - name: "projects"
@@ -81,6 +90,17 @@ collections:
     extension: "md"
     fields:
       - { label: "🖼️ Page Layout (DON'T CHANGE)", name: "layout", widget: "hidden", default: "_pages/project_page.njk" }
+
+      - label: "📐 Header Layout"
+        name: "headerLayout"
+        widget: "select"
+        options:
+          - { label: "Wide (image on top)", value: "wide" }
+          - { label: "Medium (image on top)", value: "medium" }
+          - { label: "Narrow (image on side)", value: "narrow" }
+        default: "medium"
+        required: true
+        hint: "Choose the header layout for this project."
 
       - { label: "📌 Project Title", name: "title", widget: "string" }
       - { label: "✏️ Subtitle", name: "subtitle", widget: "string", required: false }
@@ -94,8 +114,24 @@ collections:
         widget: "image" 
         hint: "Upload or select the main project image."
 
+      - label: "📸 Image Gallery (optional)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        hint: "Add a slideshow to the project header, instead of a single image (overrides header layout)."
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+
       - { label: "✏️ Image Description (for accessibility)", name: "imageAlt", widget: "string"}
 
       - { label: "📏 Highlight?", name: "highlight", widget: "boolean", default: false }
+      
+      - label: "📝 Project Description"
+        name: "projectDescription"
+        widget: "text"
+        required: false
+        hint: "One-paragraph description shown on top of body and on highlighted project cards."
 
       - { label: "👋 Project Content", name: "body", widget: "markdown" }
+

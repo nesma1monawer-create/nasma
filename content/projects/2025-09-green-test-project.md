@@ -10,3 +10,5 @@ imageAlt: a nice green rectangle
 highlight: false
 ---
 Hi from the green rectangle.
+
+![a frid with some funky type](/uploads/thumbnail.jpg)

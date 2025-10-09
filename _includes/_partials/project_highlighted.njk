@@ -1,0 +1,9 @@
+<div id="highlighted-project-container" class="main-section flex-center" style="background-color: {{ section.background }}">
+  <div class="highlighted-project-wrapper">
+    {% for project in collections.project %}
+        {% if project.data.highlight == true %}
+            {% include "_partials/project_card.njk" %}
+        {% endif %}
+    {% endfor %}
+  </div>
+</div>

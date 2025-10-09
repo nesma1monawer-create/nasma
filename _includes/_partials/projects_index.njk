@@ -1,8 +1,12 @@
-<div id="projects-container" class="main-section flex-center">
+<div id="portfolio" class="projects-container main-section flex-center">
+  {% if section.title %}
+     <h1>{{ section.title }}</h1>
+  {% endif %}
   <div class="projects-wrapper">
     {% for project in collections.project%}
-      {# <a href="{{project.url}}"><p>{{ project.data.title }}</p></a> #}
-      {% include "_partials/project_card.njk" %}
+        {% if project.data.highlight == false %}
+          {% include "_partials/project_card.njk" %}
+        {% endif %}
     {% endfor %}
   </div>
 </div>

@@ -7,6 +7,12 @@ css:
 permalink: "/"
 ---
 
-{% include "_partials/projects_index.njk" %}
-
-{{ content | safe }}
+{% for section in sections %}
+  {% if section.type == "highlighted" %}
+    {% include "_partials/project_highlighted.njk" %}
+  {% elseif section.type == "about" %}
+    {% include "_partials/about.njk" %}
+  {% elseif section.type == "portfolio" %}
+    {% include "_partials/projects_index.njk" %}
+  {% endif %}
+{% endfor %}

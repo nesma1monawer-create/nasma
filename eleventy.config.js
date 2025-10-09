@@ -12,6 +12,9 @@ export default function (eleventyConfig) {
     // copy decap admin files to the output folder
     eleventyConfig.addPassthroughCopy("admin");
 
+    // javascript
+    eleventyConfig.addPassthroughCopy("scripts");
+
 	// run local server
 	  eleventyConfig.setServerOptions({
 		port: 8080,         
@@ -60,18 +63,38 @@ export default function (eleventyConfig) {
     // **********************************
 
     // Add some fluff to the markdown
+      // --- Custom plugin to merge `{.class}` on next line into the previous image
+    const imageClassMergePlugin = (md) => {
+        const originalParse = md.parse;
+        md.parse = function (src, env) {
+        // Preprocess source to merge lines where {.class} follows an image
+        src = src.replace(
+            /(!\[.*?\]\(.*?\s*".*?"\))\s*\n\s*\{\.([^}]+)\}/g,
+            (_, img, cls) => `${img}{.${cls}}`
+        );
+        return originalParse.call(this, src, env);
+        };
+    };
+
     eleventyConfig.setLibrary(
         "md",
-        markdownIt({ html: true })
-        .use(markdownItAttrs)
+        markdownIt({
+        html: true,
+        breaks: true,
+        })
+        .use(imageClassMergePlugin) // must come first
+        .use(markdownItAttrs, {
+            allowedAttributes: ["id", "class", /^data-.*$/],
+        })
         .use(implicitFigures, {
-            figcaption: "title", // use the image title as <figcaption>
-            copyAttrs: true,     // copy class/id attributes
+            figcaption: "title",
+            copyAttrs: true,
         })
         .use((md) => {
             const defaultRender =
             md.renderer.rules.image ||
-            ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
+            ((tokens, idx, options, env, self) =>
+                self.renderToken(tokens, idx, options));
 
             md.renderer.rules.image = (tokens, idx, options, env, self) => {
             const token = tokens[idx];
