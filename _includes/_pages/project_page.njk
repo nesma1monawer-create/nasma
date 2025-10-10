@@ -50,69 +50,52 @@ css:
 
 <div class="project-content-container flex-center main-section">
   <div class="project-content-wrapper full-width">
-    {{ content | safe }}
+    {% for contentBlock in contentBlocks %}
+      {% if contentBlock.type == "markdown" %}
+        {# markdown filter is not native, make sure its enabled in elevnety.config.js #}
+        <div class="content">{{ contentBlock.content| markdown | safe }}</div>
 
-<div class="section">
-  <h1>Team</h1>
-  <h3>People who worked on this project</h3>
+      {# Disabled for now - image blocks can be added within the markdown editor anyway
+      Enable in admin/config.yml if needed #}
+      {# {% elif contentBlock.type == "imageWithClass" %}
+        <figure>
+          <img class="{{ contentBlock.size }}" src="{{ contentBlock.src }}" alt="{{ contentBlock.alt }}">
+          {% if contentBlock.title and contentBlock.title | trim != "" %}
+            <figcaption>{{ contentBlock.title }}</figcaption>
+          {% endif %}
+        </figure> #}
 
-  <div class="card-grid">
-    <div class="card card-narrow">
-      <div class="card-image">
-        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
-      </div>
-      <div class="card-body">
-        <h2>Jane Doe</h2>
-        <h3>Head of nice things</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </div>
-
-    <div class="card card-narrow">
-      <div class="card-image">
-        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
-      </div>
-      <div class="card-body">
-        <h2>Jane Doe</h2>
-        <h3>Head of nice things</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </div>
-
-    <div class="card card-narrow">
-      <div class="card-image">
-        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
-      </div>
-      <div class="card-body">
-        <h2>Jane Doe</h2>
-        <h3>Head of nice things</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </div>
-
-    <div class="card card-narrow">
-      <div class="card-image">
-        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
-      </div>
-      <div class="card-body">
-        <h2>Jane Doe</h2>
-        <h3>Head of nice things</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </div>
-
-    <div class="card card-wide">
-      <div class="card-image">
-        <img src="/uploads/profile.jpg" alt="Picture of Jane Doe">
-      </div>
-      <div class="card-body">
-        <h2>Jane Doe</h2>
-        <h3>Head of nice things</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </div>
+      {% elif contentBlock.type == "grid" %}
+        <section class="grid-section main-section">
+          {% if contentBlock.heading %}<h1>{{ contentBlock.heading }}</h1>{% endif %}
+          {% if contentBlock.sectionInfo %}<h3>{{ contentBlock.sectionInfo }}</h3>{% endif %}
+          <div class="card-grid">
+            {% for card in contentBlock.cards %}
+              <div class="card card-{{ card.layout }}" style="background-color: {{ contentBlock.cardBackground }}">
+                {% if card.image %}
+                  <div class="card-image">
+                    <img src="{{ card.image }}" alt="{{ card.heading }}">
+                  </div>
+                {% endif %}
+                <div class="card-body">
+                  {% if card.heading %}<h2>{{ card.heading }}</h2>{% endif %}
+                  {% if card.subheading %}<h3>{{ card.subheading }}</h3>{% endif %}
+                  {% if card.info %}<p>{{ card.info }}</p>{% endif %}
+                  {% if card.audio %}
+                    <audio controls>
+                      <source src="{{ card.audio }}"/>
+                        <p>
+                          Your browser does not support HTML audio, but you can still
+                          <a href="{{ card.audio }}">download the music</a>.
+                        </p>
+                    </audio>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
   </div>
-</div>
-
-
 </div>

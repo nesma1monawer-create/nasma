@@ -51,11 +51,28 @@ collections:
             name: "sections"
             widget: "list"
             types:
+              - label: "Upcoming Events"
+                name: "events"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Background Color", name: "background", widget: "color", default: "#eeeeee", hint: "Default colour: #eeeeee" }
+                  - { label: "Visible?", name: "visible", widget: "boolean", default: true, hint: "Uncheck to hide this section without deleting its content." }
+                  - label: "🪪 Cards"
+                    name: "cards"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "text", widget: "text", hint: "One or two lines of text." }
+                      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false, hint: "Optional event date" }
+                      - { label: "🏷️ URL Label", name: "label", widget: "string", required: false, hint: "Relevant event link (text label). Example: Tickets" }
+                      - { label: "🔗 URL (Link)", name: "url", widget: "string", required: false, hint: "Example: 'www.example.com/tickets'" }
+
               - label: "Highlighted Project"
                 name: "highlighted"
                 widget: "object"
                 fields:
                   - { label: "Background Color", name: "background", widget: "color", default: "#fffd8c" }
+                  - { label: "Visible?", name: "visible", widget: "boolean", default: true, hint: "Uncheck to hide this section without deleting its content." }
 
               - label: "About"
                 name: "about"
@@ -63,7 +80,7 @@ collections:
                 fields:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "About Text", name: "body", widget: "text" }
-                  - { label: "Contact Header", name: "contactHeading", widget: "string" }
+                  - { label: "Contact Heading", name: "contactHeading", widget: "string" }
                   - label: "Contact Information"
                     name: "contactInfo"
                     widget: "list"
@@ -73,6 +90,7 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
                   - { label: "Background Color", name: "background", widget: "color", default: "#ffffff" }
+                  - { label: "Visible?", name: "visible", widget: "boolean", default: true, hint: "Uncheck to hide this section without deleting its content." }
 
               - label: "Portfolio"
                 name: "portfolio"
@@ -80,6 +98,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Background Color", name: "background", widget: "color", default: "#ffffff" }
+                  - { label: "Visible?", name: "visible", widget: "boolean", default: true, hint: "Uncheck to hide this section without deleting its content." }
 
   # Projects (folder-based)
   - name: "projects"
@@ -133,5 +152,66 @@ collections:
         required: false
         hint: "One-paragraph description shown on top of body and on highlighted project cards."
 
-      - { label: "👋 Project Content", name: "body", widget: "markdown" }
+      - label: "Project Content Blocks"
+        name: "contentBlocks"
+        widget: "list"
+        types:
+          - label: "✏️ 🖼️ Normal Content Block"
+            name: "markdown"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+          # Uncomment to enable image blocks within the project body (they are available within the markdown editor anyway)
+          # - label: "🖼️ Image"
+          #   name: "imageWithClass"
+          #   widget: "object"
+          #   fields:
+          #     - { name: "src", label: "Image", widget: "image" }
+          #     - { name: "alt", label: "Description (for accessibility)", widget: "string" }
+          #     - { name: "title", label: "Caption", widget: "string", default: " ", required: false }
+          #     - label: "Size"
+          #       name: "size"
+          #       widget: "select"
+          #       options:
+          #         - { label: "Small", value: "small" }
+          #         - { label: "Medium", value: "medium" }
+          #         - { label: "Large", value: "large" }
+          #         - { label: "Extra Large", value: "extra-large" }
+          #         - { label: "True Size", value: "true-size" }
+          #       default: "medium"
+          - label: "🧇 Grid"
+            name: "grid"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string", required: false }
+              - { label: "Section Info", name: "sectionInfo", widget: "string", required: false }
+              - { label: "Background colour (cards)", name: "cardBackground", widget: "color", default: "#eeeeee" }
+
+              - label: "🪪 Cards"
+                name: "cards"
+                widget: "list"
+                label_singular: "Card"
+                summary: "{{fields.heading}} ({{fields.layout}})"
+                fields:
+                  - label: "Layout"
+                    name: "layout"
+                    widget: "select"
+                    options:
+                      - { label: "Narrow", value: "narrow" }
+                      - { label: "Wide", value: "wide" }
+                    default: "narrow"
+                    required: true
+
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Will be cropped to a square" }
+                  - { label: "Heading", name: "heading", widget: "string", required: false }
+                  - { label: "Subheading", name: "subheading", widget: "string", required: false }
+                  - label: "Card Info"
+                    name: "info"
+                    widget: "text"
+                    required: false
+                    hint: "~150 chars max for narrow, ~300 for wide."
+                  - { label: "Audio", name: "audio", widget: "file", required: false }
+                  
+
+
 

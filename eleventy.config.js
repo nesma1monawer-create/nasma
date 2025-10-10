@@ -1,6 +1,7 @@
 import * as sass from 'sass';
 import path from 'path';
 import YAML from "yaml";
+import { DateTime } from "luxon";
 
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
@@ -52,22 +53,29 @@ export default function (eleventyConfig) {
     // convert any image path to a .webp path
     eleventyConfig.addFilter("toWebp", (src) => {
         if (!src) return src;
-
         const ext = path.extname(src);             // ".jpg"
         const basename = path.basename(src, ext);  // "blue"
         const dir = path.dirname(src);             // "/uploads"
-
         // swap extension to .webp
         return path.join(dir, `${basename}.webp`).replace(/\\/g, "/");
     });
     // **********************************
 
     // Add some fluff to the markdown
-      // --- Custom plugin to merge `{.class}` on next line into the previous image
+
+    const md = markdownIt({ html: true, breaks: true })
+        .use(markdownItAttrs, {
+        allowedAttributes: ["id", "class", /^data-.*$/],
+        })
+        .use(implicitFigures, {
+        figcaption: "title",
+        copyAttrs: true,
+        });
+
+    // merge `{.class}` on next line into the previous image
     const imageClassMergePlugin = (md) => {
         const originalParse = md.parse;
         md.parse = function (src, env) {
-        // Preprocess source to merge lines where {.class} follows an image
         src = src.replace(
             /(!\[.*?\]\(.*?\s*".*?"\))\s*\n\s*\{\.([^}]+)\}/g,
             (_, img, cls) => `${img}{.${cls}}`
@@ -75,40 +83,23 @@ export default function (eleventyConfig) {
         return originalParse.call(this, src, env);
         };
     };
+    md.use(imageClassMergePlugin);
 
-    eleventyConfig.setLibrary(
-        "md",
-        markdownIt({
-        html: true,
-        breaks: true,
-        })
-        .use(imageClassMergePlugin) // must come first
-        .use(markdownItAttrs, {
-            allowedAttributes: ["id", "class", /^data-.*$/],
-        })
-        .use(implicitFigures, {
-            figcaption: "title",
-            copyAttrs: true,
-        })
-        .use((md) => {
-            const defaultRender =
-            md.renderer.rules.image ||
-            ((tokens, idx, options, env, self) =>
-                self.renderToken(tokens, idx, options));
+    eleventyConfig.setLibrary("md", md);
 
-            md.renderer.rules.image = (tokens, idx, options, env, self) => {
-            const token = tokens[idx];
-            const srcIndex = token.attrIndex("src");
+    // render as markdown (to use inline as | markdown | safe | in templates)
+    eleventyConfig.addFilter("markdown", (content) => {
+        if (!content) return "";
+        return md.render(content);
+    });
 
-            if (srcIndex >= 0) {
-                let src = token.attrs[srcIndex][1];
-                token.attrs[srcIndex][1] = eleventyConfig.getFilter("toWebp")(src);
-            }
-
-            return defaultRender(tokens, idx, options, env, self);
-            };
-        })
-    );
+    // Date formatting filter
+    eleventyConfig.addFilter("formatDate", (dateObj) => {
+        if (!dateObj) return "";
+        const jsDate = dateObj instanceof Date ? dateObj : new Date(dateObj);
+        return DateTime.fromJSDate(jsDate).toFormat("dd/MM/yyyy");
+    });
+    
 
 	return {
 		dir: {

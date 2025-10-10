@@ -1,0 +1,19 @@
+<section class="events-container flex-center" style="background-color: {{ section.background }}">
+   <div class="events-wrapper full-width">
+        <div class="events-header">
+            <h3> {{ section.heading }} </h3>
+            <h3>→</h3>
+        </div>
+        <div class="events-list">
+            {% for event in section.cards %}
+                <div class="event-card">
+                    <p class="event-text">{{ event.text }}</p>
+                    <div class="event-details">
+                        {% if event.date %}<p class="event-date">{{ event.date | formatDate }}</p>{% endif %}
+                        {% if event.label and event.url %}<p><a class="event-url" href="https://{{ event.url }}">{{ event.label }}</a></p>{% endif %} 
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>
+    </div>
+</section>

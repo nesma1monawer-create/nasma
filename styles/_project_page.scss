@@ -165,6 +165,12 @@
   text-decoration: underline;
 }
 
+// grid sections //
+
+.grid-section h1 {
+  margin-top: 0; // remove default margin; already gets padding from main-section class
+}
+
 // cards //
 
 .card-grid {
@@ -175,6 +181,8 @@
 
 .card-wide {
   grid-column: span 2;
+  height: fit-content;
+  min-height: 250px;
 }
 
 .card {

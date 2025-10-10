@@ -9,6 +9,10 @@
     gap: 0; 
 }
 
+.about-left h1 {
+    margin-top: 0;
+}
+
 .about-left ul {
     padding-left: 0;
     margin-top: 0;
@@ -35,5 +39,6 @@
 }
 
 .projects-container h1 {
+    margin-top: 0;
     width: var(--page-width);
 }

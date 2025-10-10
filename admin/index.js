@@ -15,7 +15,8 @@ CMS.registerEditorComponent({
         { label: "Small", value: "small" },
         { label: "Medium", value: "medium" },
         { label: "Large", value: "large" },
-        { label: "Extra Large", value: "extra-large" }
+        { label: "Extra Large", value: "extra-large" },
+        { label: "True Size", value: "true-size" }
       ],
       default: "medium"
     }
