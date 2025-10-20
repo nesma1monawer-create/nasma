@@ -20,6 +20,9 @@
   "homepage": "https://github.com/rodri-go123/nasma#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "globby": "^15.0.0",
+    "imagemin": "^9.0.1",
+    "imagemin-webp": "^8.0.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-implicit-figures": "^0.12.0",
     "yaml": "^2.8.1"
