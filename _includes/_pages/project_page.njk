@@ -5,4 +5,97 @@ css:
   - /styles/_project_page.css
 ---
 
-{{ content | safe }}
+{# slideshow #}
+{% if gallery %}
+  <script type="module" src="/scripts/slideshow.js"></script>
+  <div class="slideshow-container flex-center main-section">
+    <div class="slideshow-fade fade-left"></div>
+    <button class="slideshow-btn prev" aria-label="Previous">&larr;</button>
+
+    <div class="slideshow-wrapper">
+      <div class="slideshow" id="slideshow">
+        {% for image in gallery %}
+          <figure class="slide
+        {% if loop.first %}first{% endif %}
+        {% if loop.last %}last{% endif %}">
+            <img src="{{ image.image }}" alt="{{ image.caption | default('') }}">
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="slideshow-fade fade-right"></div>
+    <button class="slideshow-btn next" aria-label="Next">&rarr;</button>
+  </div>
+{% endif %}
+
+<div class="project-head-container flex-center">
+  <div class="project-head-wrapper full-width head-{{ headerLayout }}">
+
+    {% if not gallery %}
+      <div class="pr-page-pic-wrapper"><img class="pr-page-pic" src="{{thumbnail | toWebp}}" alt="{{ imageAlt }}"></div>
+    {% endif %}
+
+    <div class="project-head">
+      <h1 class="pr-page-title">{{ title }}</h1>
+      <h2 class="pr-page-subtitle">{{ subtitle }}</h2>
+      <p class="pr-page-info">{{ info }}, {{year}}</p>
+      {% if projectDescription %}<p class="pr-page-description">{{ projectDescription }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="project-content-container flex-center main-section">
+  <div class="project-content-wrapper full-width">
+    {% for contentBlock in contentBlocks %}
+      {% if contentBlock.type == "markdown" %}
+        {# markdown filter is not native, make sure its enabled in elevnety.config.js #}
+        <div class="content">{{ contentBlock.content| markdown | safe }}</div>
+
+      {# Disabled for now - image blocks can be added within the markdown editor anyway
+      Enable in admin/config.yml if needed #}
+      {# {% elif contentBlock.type == "imageWithClass" %}
+        <figure>
+          <img class="{{ contentBlock.size }}" src="{{ contentBlock.src }}" alt="{{ contentBlock.alt }}">
+          {% if contentBlock.title and contentBlock.title | trim != "" %}
+            <figcaption>{{ contentBlock.title }}</figcaption>
+          {% endif %}
+        </figure> #}
+
+      {% elif contentBlock.type == "grid" %}
+        <section class="grid-section main-section">
+          {% if contentBlock.heading %}<h1>{{ contentBlock.heading }}</h1>{% endif %}
+          {% if contentBlock.sectionInfo %}<h3>{{ contentBlock.sectionInfo }}</h3>{% endif %}
+          <div class="card-grid">
+            {% for card in contentBlock.cards %}
+              <div class="card card-{{ card.layout }}" style="background-color: {{ contentBlock.cardBackground }}">
+                {% if card.image %}
+                  <div class="card-image">
+                    <img src="{{ card.image }}" alt="{{ card.heading }}">
+                  </div>
+                {% endif %}
+                <div class="card-body">
+                  {% if card.heading %}<h2>{{ card.heading }}</h2>{% endif %}
+                  {% if card.subheading %}<h3>{{ card.subheading }}</h3>{% endif %}
+                  {% if card.info %}<p>{{ card.info }}</p>{% endif %}
+                  {% if card.audio %}
+                    <audio controls>
+                      <source src="{{ card.audio }}"/>
+                        <p>
+                          Your browser does not support HTML audio, but you can still
+                          <a href="{{ card.audio }}">download the music</a>.
+                        </p>
+                    </audio>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

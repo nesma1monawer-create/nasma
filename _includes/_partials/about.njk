@@ -1,0 +1,30 @@
+<div id="about" class="about-container main-section flex-center" style="background-color: {{ section.background }}">
+  <div class="about-wrapper flex-start full-width">
+    <div class="about-left">
+      <h1>{{ section.heading }}</h1>
+      <p>{{ section.body }}</p>
+
+      {% if section.contactHeading or section.contactInfo %}
+
+          {% if section.contactHeading %}
+            <h2>{{ section.contactHeading }}</h2>
+          {% endif %}
+
+          {% if section.contactInfo %}
+            <ul>
+              {% for item in section.contactInfo %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.label }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+      {% endif %}
+
+    </div>
+    <div class="about-right">
+      <img src="{{ section.image }}" alt="{{ section.imageAlt }}">
+    </div>
+  </div>
+</div>

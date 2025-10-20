@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Find all JPG and PNG images
-find projects -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read -r img; do
+# Location of global uploads
+UPLOADS_DIR="content/uploads"
+
+# Find all JPG and PNG images inside uploads (but skip _processed subfolders)
+find "$UPLOADS_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) ! -path "*/_processed/*" | while read -r img; do
     dir=$(dirname "$img")
     filename=$(basename "$img" | sed 's/\.[^.]*$/.webp/')
     output_dir="$dir/_processed"
@@ -19,4 +22,4 @@ find projects -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) 
     fi
 done
 
-echo "✅ Conversion complete! Images saved in '_processed' subfolders."
+echo "✅ Conversion complete! Images saved in '_processed' subfolders inside $UPLOADS_DIR."

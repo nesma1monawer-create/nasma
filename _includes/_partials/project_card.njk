@@ -1,0 +1,18 @@
+<a href="{{project.url}}">
+    <div class="{% if project.data.highlight %}flex-start{% else %}pr-card{% endif %}">
+        <img class="pr-pic" src="{{project.data.thumbnail | toWebp}}" alt="{{ project.data.imageAlt }}">
+        <div class= "pr-body">
+        {% if project.data.highlight %}
+            <h1>{{ project.data.title }}</h1>
+            <h2 class="pr-subtitle">{{ project.data.subtitle }}</h2>
+            <p class="pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
+            {% if project.data.projectDescription %}<p class="pr-description">{{ project.data.projectDescription }}</p>{% endif %}
+            <span class="read-more">Read more</span>
+        {% else %}
+            <h2>{{ project.data.title }}</h2>
+            <p class="pr-subtitle">{{ project.data.subtitle }}</p>
+            <p class="pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
+        {% endif %}
+        </div>
+    </div>
+</a>

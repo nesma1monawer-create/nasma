@@ -1,0 +1,229 @@
+// slideshow //
+.slideshow-container {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.slideshow-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  // scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.slideshow-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.slideshow {
+  display: flex;
+  gap: var(--spacer);
+}
+
+// image slides //
+.slide {
+  flex: 0 0 auto;
+  // scroll-snap-align: start;
+  text-align: center;
+  max-width: 70%;
+}
+
+.slide img {
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.slide figcaption {
+  color: white;
+  opacity: 1;
+  margin-top: 5px;
+}
+
+.slide.first {
+  padding-left: calc((100vw - var(--page-width)) / 2);
+}
+
+.slide.last {
+  padding-right: calc((100vw - var(--page-width)) / 2);
+}
+
+// buttons//
+.slideshow-btn {
+  position: absolute;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  background: rgba(59, 59, 59, 0.5);
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 0.3rem 0.45rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 11; /* above gradients */
+  color: rgba(255, 255, 255, 1);
+}
+.slideshow-btn.prev {
+  left: calc((100vw - var(--page-width)) / 2 - 4rem);
+}
+.slideshow-btn.next {
+  right: calc((100vw - var(--page-width)) / 2 - 4rem);
+}
+
+// fades (disabled atm) //
+.slideshow-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc((100vw - var(--page-width)) / 2);
+  z-index: 10; /* above slides, below buttons */
+  pointer-events: none; /* allow clicks through */
+  display: none;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, black 0%, transparent 100%);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, black 0%, transparent 100%);
+}
+
+// head //
+
+.project-head-container {
+  width: 100%;
+}
+
+.project-head-container h1 {
+  font-size: 4rem;
+}
+
+.project-head-container h2, .project-content-container h2 {
+  font-size: 2.5rem;
+}
+
+.pr-page-info, .pr-page-description {
+  font-size: 1.5rem;
+}
+
+.pr-page-pic-wrapper {
+  padding-top: calc(var(--spacer) * 2);
+}
+
+
+.pr-page-pic-wrapper img {
+  width: 100%;
+}
+
+.project-head {
+  width: 70%;
+}
+
+.head-narrow {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: calc(var(--spacer) * 2);
+}
+
+.head-narrow .pr-page-pic-wrapper {
+  width: 30%;
+}
+
+.head- .pr-page-pic-wrapper, .head-medium .pr-page-pic-wrapper {
+  width: 70%;
+}
+
+.head-large .pr-page-pic-wrapper {
+  width: 100%;
+}
+
+// body //
+
+.project-content-wrapper p, .project-content-wrapper h1, .project-content-wrapper h2, .project-content-wrapper h3, .project-content-wrapper h4, .project-content-wrapper h5, .project-content-wrapper h6 {
+  width: 70%
+}
+
+.project-content-wrapper h3, .project-content-wrapper h4, .project-content-wrapper h5, .project-content-wrapper h6 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.project-content-wrapper h3 {
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
+.project-content-wrapper a {
+  color: blue;
+}
+
+.project-content-wrapper a:hover {
+  text-decoration: underline;
+}
+
+// grid sections //
+
+.grid-section h1 {
+  margin-top: 0; // remove default margin; already gets padding from main-section class
+}
+
+// cards //
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacer);
+}
+
+.card-wide {
+  grid-column: span 2;
+  height: fit-content;
+  min-height: 250px;
+}
+
+.card {
+  display: flex;
+  height: 250px;
+  overflow: hidden;
+  background-color: beige;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.card-body h2, .card-body h3, .card-body p {
+  width: 100%;
+}
+
+.card-body h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  margin-top: 4px;
+}
+
+// see application.scss for figure(image) and caption sizes

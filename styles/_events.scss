@@ -1,0 +1,95 @@
+.events-container {
+    width: 100%;
+    padding: var(--spacer) 0;
+    background-color: #ffffff;
+}
+
+.events-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+// scrolling component
+.events-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.events-list::-webkit-scrollbar {
+  display: none;
+}
+
+.event-card {
+    flex: 0 0 calc((100% - ((3 * (2 * var(--spacer))) + (2 * 2px))) / 3); // full width - ( ( number of cards * left/right padding ) + visible borders ) / number of cards
+    padding: 10px var(--spacer);
+    margin-right: 2px;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.event-card:last-child {
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.one-card .event-card {
+    flex: 0 0 calc(100% - (2 * var(--spacer)));
+    flex-direction: row;
+}
+
+.two-cards .event-card {
+    flex: 0 0 calc((100% - (2 * (2 * var(--spacer)))) / 2);
+}
+
+.event-card p {
+    margin: 10px 0;
+}
+
+.events-header {
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.events-header h3 {
+    margin: 0;
+    padding: 10px var(--spacer);
+}
+
+.event-details {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.one-card .event-details {
+    gap: calc(var(--spacer)/2);
+}
+
+.event-url {
+    color: blue;
+}
+
+.event-url:hover {
+    text-decoration: underline;
+}
+
+.event-date::before {
+    content: "🗓️ ";
+}
+
+.event-url::before {
+    content: "🔗 ";
+}

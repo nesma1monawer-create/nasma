@@ -3,7 +3,19 @@ title: title
 layout: _layouts/headers_footers.njk
 css:
   - /styles/_index.css
+  - /styles/_project_card.css
+  - /styles/_events.css
 permalink: "/"
 ---
 
-{{ content | safe }}
+{% for section in sections %}
+  {% if section.type == "events" and section.visible %}
+    {% include "_partials/events.njk" %}
+  {% elseif section.type == "highlighted" and section.visible %}
+    {% include "_partials/project_highlighted.njk" %}
+  {% elseif section.type == "about" and section.visible %}
+    {% include "_partials/about.njk" %}
+  {% elseif section.type == "portfolio" and section.visible %}
+    {% include "_partials/projects_index.njk" %}
+  {% endif %}
+{% endfor %}

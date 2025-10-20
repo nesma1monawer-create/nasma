@@ -1,0 +1,16 @@
+title: Nasma Al-Shutfa
+nav:
+  - label: I am grateful(?)
+    url: /content/projects/2000-03-main-project/
+  - label: Portfolio
+    url: /#portfolio
+  - label: About/Contact
+    url: /#about
+footer:
+  text: Get in touch
+  links:
+    - label: Email
+      url: mailto:example@example.com
+    - label: GitHub
+      url: https://github.com/example-user
+  info: © 2024 Nasma. All rights reserved.

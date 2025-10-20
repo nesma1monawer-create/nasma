@@ -1,0 +1,85 @@
+// highlighted 
+.highlighted-project-wrapper {
+    width: var(--page-width);
+}
+
+.highlighted-project-wrapper .pr-pic{
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+}
+
+.highlighted-project-wrapper .pr-body{
+    max-width: 50%;
+}
+
+.highlighted-project-wrapper h1{
+    font-size: 4rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.highlighted-project-wrapper h2{
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.highlighted-project-wrapper .read-more{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding: 5px 14px 6px 14px;
+    border: 1px solid black;
+    // border-radius: 50px;
+    display: inline-block;
+}
+
+.highlighted-project-wrapper .read-more:hover{
+    color: white;
+    background-color: var(--black-grey);
+}
+
+.highlighted-project-wrapper .read-more-arrow{
+    font-size: 1.3rem;
+}
+
+// portfolio (grid)
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 equal columns
+  gap: var(--spacer);
+  width: var(--page-width);
+  margin: 0 auto;
+}
+
+.pr-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pr-card .pr-pic {
+    width: 100%;;
+}
+
+// media queries
+
+// Monitors, large laptops //
+@media (width >= 1500px) {
+  .highlighted-project-wrapper h1{
+    margin-top: 40px; // maybe make it vw?
+  }
+
+}
+
+@media (max-width: 950px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .projects-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

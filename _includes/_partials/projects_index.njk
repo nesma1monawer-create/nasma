@@ -1,0 +1,12 @@
+<div id="portfolio" class="projects-container main-section flex-center">
+  {% if section.title %}
+     <h1>{{ section.title }}</h1>
+  {% endif %}
+  <div class="projects-wrapper">
+    {% for project in collections.project%}
+        {% if not project.data.highlight and project.data.visible %}
+          {% include "_partials/project_card.njk" %}
+        {% endif %}
+    {% endfor %}
+  </div>
+</div>
