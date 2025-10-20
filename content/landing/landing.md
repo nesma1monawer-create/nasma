@@ -7,7 +7,7 @@ sections:
     visible: true
     heading: Upcoming Events
     cards:
-      - text: I am grateful(?) exhibition opening at Very Nice Venue.
+      - text: I am grateful(?) exhibition opening at Super Nice Venue.
         date: 2025-10-10
         label: Tickets
         url: www.example.com/tickets
