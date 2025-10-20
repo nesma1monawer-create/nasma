@@ -76,17 +76,21 @@ const UPLOADS_DIR = "content/uploads";
 
   let deletedCount = 0;
   for (const webp of processedFiles) {
-    const original = webp
-      .replace("/_processed/", "/")
-      .replace(/\.webp$/, path.extname(webp).replace(".webp", ""));
-    const baseOriginal = original.replace(/_processed\//, "");
+    // Compute candidate originals (JPG/JPEG/PNG)
+    const originalCandidates = [".jpg", ".jpeg", ".png"].map(ext =>
+      webp.replace("/_processed/", "/").replace(/\.webp$/, ext)
+    );
 
-    const exists = await fs.promises
-      .access(baseOriginal)
-      .then(() => true)
-      .catch(() => false);
+    let originalExists = false;
+    for (const candidate of originalCandidates) {
+      try {
+        await fs.promises.access(candidate);
+        originalExists = true;
+        break;
+      } catch {}
+    }
 
-    if (!exists) {
+    if (!originalExists) {
       await fs.promises.unlink(webp);
       deletedCount++;
       console.log(`🗑️ Deleted stale file: ${webp}`);
