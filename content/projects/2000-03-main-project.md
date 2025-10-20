@@ -1,12 +1,16 @@
 ---
 layout: _pages/project_page.njk
+headerLayout: medium
 title: I am grateful(?)
 subtitle: Your main project's subtitle, very nice.
 info: Template
 year: 2000
 date: 2000-03-23
 thumbnail: /uploads/blue.jpg
+imageAlt: a nice blue rectangle
 gallery:
+  - image: /uploads/green.jpg
+    caption: a nice green picture
   - image: /uploads/slideshow_test.jpg
     caption: "Test caption #1"
   - image: /uploads/slideshow_test.jpg
@@ -17,7 +21,6 @@ gallery:
     caption: image capt 4
   - image: /uploads/slideshow_test.jpg
     caption: test 5
-imageAlt: a nice blue rectangle
 highlight: true
 projectDescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -31,6 +34,7 @@ projectDescription: >-
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 
   mollit anim id est laborum.
+visible: true
 ---
 
 # 👋 Project Content

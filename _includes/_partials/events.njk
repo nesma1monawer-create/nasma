@@ -1,8 +1,11 @@
 <section class="events-container flex-center" style="background-color: {{ section.background }}">
-   <div class="events-wrapper full-width">
+   <div class="events-wrapper full-width 
+    {% if section.cards | length == 1 %}one-card
+    {% elif section.cards | length == 2 %}two-cards
+    {% else %}multi-cards{% endif %}">
         <div class="events-header">
             <h3> {{ section.heading }} </h3>
-            <h3>→</h3>
+            <h3>{% if section.cards | length > 3 %}→{% else %}▾{% endif %}</h3>
         </div>
         <div class="events-list">
             {% for event in section.cards %}

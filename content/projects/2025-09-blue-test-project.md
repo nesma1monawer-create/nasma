@@ -1,5 +1,6 @@
 ---
 layout: _pages/project_page.njk
+headerLayout: medium
 title: Blue Test Project
 subtitle: Here's a nice blue square.
 info: Film
@@ -8,5 +9,6 @@ date: 2000-09-16
 thumbnail: /uploads/aqua.jpg
 imageAlt: an aqua-blue rectangle
 highlight: false
+visible: true
 ---
 Hi from blue project.

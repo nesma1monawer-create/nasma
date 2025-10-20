@@ -1,8 +1,14 @@
+# Set-up for deployment with Netflify and Github. Use section below for local development.
 backend:
   name: git-gateway
-  branch: staging
+  branch: main
 
-local_backend: true
+# Uncomment for local development. Use `npx decap-server` parallel to `elventy --serve` to serve the CMS locally.
+# backend:
+#   name: git-gateway
+#   branch: staging
+
+# local_backend: true
 
 media_folder: "content/uploads"   # where uploaded files are stored in the repo
 public_folder: "/uploads"         # how those files are served on the site
@@ -133,6 +139,8 @@ collections:
         widget: "image" 
         hint: "Upload or select the main project image."
 
+      - { label: "✏️ Image Description (for accessibility)", name: "imageAlt", widget: "string"}
+
       - label: "📸 Image Gallery (optional)"
         name: "gallery"
         widget: "list"
@@ -142,8 +150,6 @@ collections:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Caption", name: "caption", widget: "string", required: false }
 
-      - { label: "✏️ Image Description (for accessibility)", name: "imageAlt", widget: "string"}
-
       - { label: "📏 Highlight?", name: "highlight", widget: "boolean", default: false }
       
       - label: "📝 Project Description"
@@ -151,6 +157,8 @@ collections:
         widget: "text"
         required: false
         hint: "One-paragraph description shown on top of body and on highlighted project cards."
+
+      - { label: "Visible?", name: "visible", widget: "boolean", default: true, hint: "Uncheck to hide this project without deleting its content." }
 
       - label: "Project Content Blocks"
         name: "contentBlocks"

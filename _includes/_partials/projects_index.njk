@@ -4,7 +4,7 @@
   {% endif %}
   <div class="projects-wrapper">
     {% for project in collections.project%}
-        {% if project.data.highlight == false %}
+        {% if not project.data.highlight and project.data.visible %}
           {% include "_partials/project_card.njk" %}
         {% endif %}
     {% endfor %}

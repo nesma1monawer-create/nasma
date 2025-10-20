@@ -15,6 +15,7 @@ projectDescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
   non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+visible: true
 contentBlocks:
   - type: markdown
     content: >-
@@ -76,6 +77,11 @@ contentBlocks:
         info: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
         image: /uploads/profile.jpg
+      - layout: narrow
+        image: /uploads/blue.jpg
+        heading: Nasma
+        subheading: Project Initiator
+        info: Here is some nice information.
     cardBackground: "#eeeeee"
     sectionBackground: "#fbd1d1"
   - type: markdown
