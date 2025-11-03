@@ -2,7 +2,7 @@
 # Use DecapBridge classic auth (required)
 backend:
   name: git-gateway
-  repo: rodri-go123/nasma
+  repo: nesma1monawer-create/nasma
   branch: main
   identity_url: https://auth.decapbridge.com/sites/589ec6c5-7be6-40df-8a1e-bbd22bf2fa62
   gateway_url: https://gateway.decapbridge.com
@@ -20,7 +20,7 @@ backend:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in Decap CMS (optional)
-site_url: https://nasma-testing.netlify.app # change this when we get the domain
+site_url: https://nasmaalshutfa.com # change this if you ever change your domain
 
 # Uncomment for local development. Use `npx decap-server` parallel to `elventy --serve` to serve the CMS locally.
 # backend:

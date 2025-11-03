@@ -1,9 +1,7 @@
 title: Nasma Al-Shutfa
 nav:
   - label: I am grateful(?)
-    url: /content/projects/2000-03-main-project/
-  - label: Portfolio
-    url: /#portfolio
+    url: /content/projects/2025-11-i-am-grateful/
   - label: About/Contact
     url: /#about
 footer:
@@ -11,6 +9,6 @@ footer:
   links:
     - label: Email
       url: mailto:example@example.com
-    - label: GitHub
-      url: https://github.com/example-user
-  info: © 2024 Nasma. All rights reserved.
+    - label: Instagram
+      url: https://instagram.com/example-user
+  info: © 2025 Nasma. All rights reserved.

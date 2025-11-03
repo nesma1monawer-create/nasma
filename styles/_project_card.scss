@@ -76,6 +76,19 @@
   .projects-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .highlighted-project-wrapper .pr-pic, .highlighted-project-wrapper .pr-body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pr-body h1 {
+    font-size: 3rem;
+  }
+
+  .highlighted-project-wrapper .flex-start {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 650px) {

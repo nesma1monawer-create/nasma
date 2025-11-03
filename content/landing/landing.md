@@ -11,25 +11,6 @@ sections:
         date: 2025-10-10
         label: Tickets
         url: www.example.com/tickets
-      - text: Free zine-making workshops at the Cute Zine Fair 2025.
-        date: 2025-10-13
-        label: Sign up for free
-        url: www.example.com
-      - text: Looking for collaborators – talk to me about your experience in the
-          Netherlands.
-        date: 2025-10-07
-        label: Read more
-        url: www.example.com
-      - text: Another announcement - let's see if this can scroll! It would be really
-          nice I think.
-        date: 2025-10-10
-        label: link
-        url: www.example.com
-      - text: Last Announcement is an annual event to showcase the last element in this
-          list.
-        date: 2025-10-10
-        label: link
-        url: www.example.com
   - type: highlighted
     background: "#fff434"
     visible: true
@@ -71,6 +52,6 @@ sections:
   - type: portfolio
     background: "#ffffff"
     title: Portfolio
-    visible: true
+    visible: false
 ---
  hi from landing page

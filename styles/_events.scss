@@ -93,3 +93,13 @@
 .event-url::before {
     content: "🔗 ";
 }
+
+// Vertical layouts //
+
+@media (width <= 950px) {
+
+  .one-card .event-card {
+        flex-direction: column;
+    }
+
+}

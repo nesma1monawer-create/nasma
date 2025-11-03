@@ -227,3 +227,15 @@
 }
 
 // see application.scss for figure(image) and caption sizes
+
+@media (max-width: 950px) {
+  .slideshow-fade{
+    display: inline;
+    width: calc((100vw - var(--page-width)) / 1);
+    opacity: 0.5;
+  }
+
+  .fade-left {
+    display: none;
+  }
+}
