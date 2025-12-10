@@ -14,34 +14,26 @@ sections:
   - type: highlighted
     background: "#fff434"
     visible: true
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor
-
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-
-      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-
-      mollit anim id est laborum.
+  - body: I am dedicated to creating spaces that blend research, culture, and
+      personal narratives, while integrating activism into design with a strong
+      focus on human rights, equality, and social justice. My work combines
+      aesthetic and functional excellence with a mission to create meaningful
+      social impact.
     contactHeading: Contact Information
     heading: Nasma Al-Shutfa
     contactInfo:
-      - label: nasma@example.com
-        url: mailto:nasma@example.com
-      - label: Instagram
-        url: https://www.instagram.com/example/
-      - label: Other useful link
-        url: https://www.example.com
-    background: "#ffffff"
+      - label: nesma1monawer@gmail.com
+        url: "1"
+      - label: "@nasmaalshutfa"
+        url: https://www.instagram.com/nasmaalshutfa/
+      - label: "1"
+        url: "1"
+    background: "#000000"
     imageAlt: Picture of Nasma Al-Shutfa
     visible: true
     contact-heading: Contact Information
     type: about
-    image: /uploads/profile.jpg
+    image: /uploads/20221020_143958.jpg
     contact-info:
       - label: nasma@example.com
         url: mailto:nasma@example.com
@@ -50,8 +42,8 @@ sections:
       - label: Other useful links
         url: https://www.example.com
   - type: portfolio
-    background: "#ffffff"
+    background: "#000000"
     title: Portfolio
-    visible: false
+    visible: true
 ---
  hi from landing page
