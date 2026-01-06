@@ -12,21 +12,21 @@ gallery:
   - image: /uploads/nasma-alshutfa-royal-academy-of-art-i-am-grateful-2025-3.jpg.jpg
     caption: ""
   - image: /uploads/actual-rooms.jpg
-    caption: Actual Rooms
+    caption: Actual rooms
   - image: /uploads/paper-rooms.jpg
-    caption: Paper Rooms, Everything revolved around paperwork, forms, evidence, and
-      a system that reduced my life to documents.
+    caption: Paper rooms
   - image: /uploads/waiting-rooms.jpg
-    caption: "Waiting Rooms, Waiting became my enemy—I had no choice but to wait. "
+    caption: Waiting rooms
   - image: /uploads/emotional-room.jpg
-    caption: Emotional Rooms, Emotions change the atmosphere and shape the
-      environment around me.
+    caption: Prison Room
   - image: /uploads/nail-clipper-room.jpg
-    caption: Nail clippers room, Every week, we received the same items. Even the
-      nail clipper became irritating.
+    caption: Nail clippers room
   - image: /uploads/trauma-room.jpg
-    caption: Trauma room,  Old traumas return, and the weight of others’ traumas
-      blurs with your own.
+    caption: Trauma room
+  - image: /uploads/glass-room.jpg
+    caption: Glass room
+  - image: /uploads/bended-room.jpg
+    caption: Bended room
 highlight: true
 projectDescription: Imagine a space where time stands still—not for minutes, but
   for months and years. A space where stories remain unheard, and where waiting
@@ -52,39 +52,24 @@ contentBlocks:
 
 
       Through co-created narratives and testimonies gathered from people of diverse backgrounds who are living or have lived in AZCs across the Netherlands, I am Grateful (?!) makes the hidden visible. It gives form to the complex emotions of living in transit—where destinations are uncertain, control is lost, and comfort must always remain temporary.
-  - type: markdown
-    content: |-
-      **Manifesto**
-
-      A place to share,  A moment to understand.
-
-      We are here— from many places, 
-
-      carrying different names, languages, and histories.
-
-      We share our stories. We question because we care. 
-
-      We critique because we want to belong. 
-
-      We speak  in  fragments,  in  memories, in  truths  too often  ignored. 
-
-      We are told to be grateful— and we are.  But not in silence. 
-
-      Our gratitude is not submission. It is a voice. It is a will to be seen.
-
-      We gather not for empathy, but to be understood. 
-
-      Not to be pitied, but to be heard: fully, equally, as humans. 
-
-      I am Grateful (?!) is a platform:
-
-      a place for dialogue, a space where borders dissolve,
-
-      where emotions matter, where silence becomes speech, 
-
-      and stories shift the frame.
   - type: grid
-    cardBackground: "#ec6239"
+    cardBackground: "#f5c45c"
+    heading: Different events
+    cards:
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-27.jpg
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-29.jpg
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-19.jpg
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-46.jpg
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-51.jpg
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-69.jpg
+  - type: grid
+    cardBackground: "#f5c45c"
     heading: Team
     sectionInfo: A collective shaped by collaboration
     cards:
