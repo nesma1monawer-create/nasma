@@ -3,16 +3,17 @@ title: Landing Page
 layout: _pages/index.njk
 sections:
   - type: events
-    background: "#ffffff"
+    background: "#5e7b3d"
     visible: true
     heading: Upcoming Events
     cards:
-      - text: I am grateful(?) exhibition opening at Super Nice Venue.
-        date: 2025-10-10
-        label: Tickets
-        url: www.example.com/tickets
+      - text: I am Grateful(?) Round table at Imagine IC, Bijlmerplein 393, 1102 BP
+          Amsterdam
+        date: 2026-02-03
+        label: Tickets / Registration
+        url: "By email: nesma1monawer@gmail.com"
   - type: highlighted
-    background: "#fff434"
+    background: "#6366ac"
     visible: true
   - body: I am dedicated to creating spaces that blend research, culture, and
       personal narratives, while integrating activism into design with a strong
@@ -24,11 +25,11 @@ sections:
     contactInfo:
       - label: nesma1monawer@gmail.com
         url: "1"
-      - label: "@nasmaalshutfa"
+      - label: Instagram  nasmaalshutfa
         url: https://www.instagram.com/nasmaalshutfa/
-      - label: "1"
-        url: "1"
-    background: "#000000"
+      - label: Linkedin  Nasma Al-Shutfa
+        url: https://www.linkedin.com/in/nasma-al-shutfa-76a1a0139/
+    background: "#ba9ac8"
     imageAlt: Picture of Nasma Al-Shutfa
     visible: true
     contact-heading: Contact Information
@@ -42,7 +43,7 @@ sections:
       - label: Other useful links
         url: https://www.example.com
   - type: portfolio
-    background: "#000000"
+    background: "#f5c45c"
     title: Portfolio
     visible: true
 ---
