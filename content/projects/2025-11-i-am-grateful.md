@@ -1,7 +1,7 @@
 ---
 layout: _pages/project_page.njk
 headerLayout: wide
-title: I am grateful (?!)
+title: I am Grateful (?!)
 subtitle: From Personal to Collective
 info: ""
 year: 2022
@@ -11,16 +11,22 @@ imageAlt: Exhibition images
 gallery:
   - image: /uploads/nasma-alshutfa-royal-academy-of-art-i-am-grateful-2025-3.jpg.jpg
     caption: ""
-  - image: /uploads/2-actual-rooms.jpg
-    caption: "Test caption #1"
-  - image: /uploads/3-paper-rooms.jpg
-    caption: "Test caption #2"
-  - image: /uploads/4-waiting-rooms.jpg
-    caption: test caption 3
-  - image: /uploads/5-emotional-rooms-1.jpg
-    caption: image capt 4
-  - image: /uploads/6-emotional-rooms-2.jpg
-    caption: test 5
+  - image: /uploads/actual-rooms.jpg
+    caption: Actual Rooms
+  - image: /uploads/paper-rooms.jpg
+    caption: Paper Rooms, Everything revolved around paperwork, forms, evidence, and
+      a system that reduced my life to documents.
+  - image: /uploads/waiting-rooms.jpg
+    caption: "Waiting Rooms, Waiting became my enemy—I had no choice but to wait. "
+  - image: /uploads/emotional-room.jpg
+    caption: Emotional Rooms, Emotions change the atmosphere and shape the
+      environment around me.
+  - image: /uploads/nail-clipper-room.jpg
+    caption: Nail clippers room, Every week, we received the same items. Even the
+      nail clipper became irritating.
+  - image: /uploads/trauma-room.jpg
+    caption: Trauma room,  Old traumas return, and the weight of others’ traumas
+      blurs with your own.
 highlight: true
 projectDescription: Imagine a space where time stands still—not for minutes, but
   for months and years. A space where stories remain unheard, and where waiting
