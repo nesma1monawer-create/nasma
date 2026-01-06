@@ -22,32 +22,53 @@ gallery:
   - image: /uploads/6-emotional-rooms-2.jpg
     caption: test 5
 highlight: true
-projectDescription: |-
-  We are here— from many places,
-  carrying different names, languages, and histories.
+projectDescription: >-
+  We are here— from many places, carrying different names, languages, and
+  histories.
+
   We share our stories.
+
   We question because we care.
+
   We critique because we want to belong.
+
   We speak in fragments, in memories, in truths too often ignored.
+
   We are told to be grateful— and we are.
+
   But not in silence.
+
   Our gratitude is not submission.
+
   It is a voice. It is a will to be seen.
+
   We gather not for empathy, but to be understood.
+
   Not to be pitied, but to be heard:
+
   fully, equally, as humans.
+
   I am Grateful (?!) is a platform:
-  a place for dialogue,
-  a space where borders dissolve,
-  where emotions matter,
-  where silence becomes speech,
+
+  a place for dialogue, a space where borders dissolve,
+
+  where emotions matter, where silence becomes speech,
+
   and stories shift the frame.
-  This is a place to listen, to feel,
-  to confront, to imagine.
-  You may find echoes of your own story here— or perhaps
-  you are witnessing these realities for the first time.
+
+  This is a place to listen, to feel, to confront, to imagine.
+
+  You may find echoes of your own story here— or perhaps you are witnessing these realities for the first time.
+
   Wherever you stand, let listening be your beginning.
 visible: true
+contentBlocks:
+  - type: grid
+    cardBackground: "#6366ac"
+    heading: Team
+    sectionInfo: ""
+    cards:
+      - layout: narrow
 ---
 
 # 👋 Project Content
