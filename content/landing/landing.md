@@ -14,7 +14,7 @@ sections:
         url: "By email: nesma1monawer@gmail.com"
       - text: I am Grateful (?!) Iftar and closing event at Imagine IC, Bijlmerplein
           393, 1102 BP Amsterdam
-        date: 2026-01-27
+        date: 2026-02-27
   - type: highlighted
     background: "#6366ac"
     visible: true
