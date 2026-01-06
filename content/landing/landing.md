@@ -3,7 +3,7 @@ title: Landing Page
 layout: _pages/index.njk
 sections:
   - type: events
-    background: "#5e7b3d"
+    background: "#a7c7e4"
     visible: true
     heading: Upcoming Events
     cards:
@@ -29,7 +29,7 @@ sections:
         url: https://www.instagram.com/nasmaalshutfa/
       - label: Linkedin  Nasma Al-Shutfa
         url: https://www.linkedin.com/in/nasma-al-shutfa-76a1a0139/
-    background: "#ba9ac8"
+    background: "#f5c45c"
     imageAlt: Picture of Nasma Al-Shutfa
     visible: true
     contact-heading: Contact Information
@@ -43,7 +43,7 @@ sections:
       - label: Other useful links
         url: https://www.example.com
   - type: portfolio
-    background: "#f5c45c"
+    background: "#ec6239"
     title: Portfolio
     visible: true
 ---
