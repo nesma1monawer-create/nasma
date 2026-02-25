@@ -18,6 +18,17 @@ gallery:
     caption: Paper rooms
   - image: /uploads/waiting-rooms.jpg
     caption: Waiting rooms
+  - image: /uploads/emotional-rooms.jpg
+  - image: /uploads/nail-clipper-room.jpg
+    caption: Nail clipper room
+  - image: /uploads/trauma-room.jpg
+    caption: Trauma room
+  - image: /uploads/emotional-room.jpg
+    caption: "Prison room "
+  - image: /uploads/bended-room.jpg
+    caption: Bended room
+  - image: /uploads/glass-room.jpg
+    caption: Glass room
 highlight: true
 projectDescription: ""
 visible: true
@@ -38,4 +49,93 @@ contentBlocks:
 
 
       **Through co-created narratives and testimonies gathered from different AZCs around the Netherlands, *I am Grateful (?!)* makes the hidden visible. It gives form to the complex emotions of living in transit—where destinations are uncertain, control is lost, and comfort must always remain temporary.**
+  - type: grid
+    cardBackground: "#eeeeee"
+    heading: Activities
+    sectionInfo: Moments that inspire, challenge, and connect
+    cards:
+      - layout: wide
+        image: /uploads/3.jpg
+        info: >
+          This first storytelling workshop served as an introductory gathering
+          for participants who are living or have lived in different refugee
+          centres. The session aimed to:
+
+          Build trust and create a safe environment.
+
+          Encourage participants to get to know one another.
+
+          Offer a day out and an opportunity to meet new people.
+
+          Provide space to share experiences and reduce feelings of isolation.
+
+          Introduce the project and allow participants to choose how they wish to be involved.
+
+          Begin collecting general insights into participants’ stories.
+
+          Help participants to position themselves within the project and decide what they feel comfortable sharing.
+        subheading: Story telling
+        heading: Workshop 1
+      - layout: wide
+        info: >
+          In this session, we dove into the WHAT and HOW of personal stories,
+          focusing on life inside AZCs (asylum seeker centers).
+
+          We asked participants reflective questions — exploring both personal experience and spatial imagination.
+
+          (WHAT)
+
+          What was the worst AZC you've stayed in — and why?
+
+          What problems do society never see?
+
+          What do you love/hate about your room?
+
+          What message do you want to share with the world — inside or outside the AZC?
+
+          What’s missing in your room, and what would you add?
+
+          (HOW)
+
+          Can you draw your room(s) and show where they sit within the AZC?
+
+          If you could design a room to express a feeling about the invisible borders, what would that feeling be — and why?
+
+          What if there were 5 rooms, each showing a border you experience — what would you name each one?
+        heading: "Workshop 2 "
+        subheading: Story telling
+        image: /uploads/20250617_124106.jpg
+      - layout: wide
+        image: /uploads/for-web.jpg
+        info: >
+          It is important for the participants to be directly involved in
+          building their rooms, shaping the details, and ensuring that the space
+          truly reflects their ideas and experiences. This process helps them
+          feel connected to the room and grounded in it.
+        subheading: Build up
+        heading: Workshop 3
+      - layout: wide
+        image: /uploads/iamgrateful-highres_cr_paconúñez-27.jpg
+        heading: Exhibition opening
+        subheading: At Imagine IC
+        info: >-
+          The opening event exceeded expectations, welcoming around 50 attendees
+          from across our network, including researchers, architects, artists,
+          and representatives from various institutions and organisations.
+
+          The programme began with a welcome speech by Imagine IC’s manager, Danielle Kuijten, followed by an introduction from project leader Nasma Alshutfa. Each member of the I Am Grateful team — Dona, Wafa, Ibtehal, Osman, Hadi, Hadir, Buthaina, and Samira — shared their role, emotions, and contributions, creating a warm and engaging atmosphere.
+
+          We focused on guiding visitors through the installation and facilitating conversations around the work. Participants stood proudly beside their rooms, engaging in long, meaningful conversations with visitors.
+      - layout: wide
+        image: /uploads/web-1.jpg
+        info: >
+          This roundtable uses the installation to spark dialogue. Participants
+          explore the rooms, choose one that resonates, and share reflections
+          before moving into small groups to discuss challenges,
+          responsibilities, and possibilities for action. We end by gathering
+          again to exchange insights and consider what change is possible within
+          our roles. 
+
+          The session brings together different organisations — including SAWA, CIVIC, and Takecarebnb — as well as people with lived experience, to reflect collectively and translate those reflections into meaningful steps.
+        heading: Roundtable 1
 ---
