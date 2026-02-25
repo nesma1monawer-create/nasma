@@ -43,37 +43,37 @@ contentBlocks:
 
 
       **Lasting Things** is a travelling exhibition that makes these quiet stories visible — the lives that continue to exist within objects.
-  - type: markdown
-    content: >-
-      **Team**
-
-
-      Concept and direction: **Handan Tufan**
-
-
-      Miniatures and set design: **Nasma Al-Shutfa**
-
-
-      Cinematographer and editor: **Iztokk**
-
-
-      Sound design: **Suzan van Eck**
-
-
-      Voice-over: **Habib Rezai-De Keizer**
-
-
-      Translation: **Ainaz Moghaddam, Habib Rezai-De Keizer**
-
-
-      Producer: **Milena Mulders**
-
-
-      Consultant: **Vincent Fitz-Jim**
-
-
-      The voice-over was provided by Habib Rezai-De Keizer, based on Haroon's story, which was recorded and filmed by Handan Tufan.
-
-
-      Special thanks to **Haroon.**
+  - type: grid
+    cardBackground: "#ec6239"
+    heading: Team
+    cards:
+      - layout: narrow
+        heading: Concept and direction
+        subheading: ""
+        info: Handan Tufan
+      - layout: narrow
+        heading: Miniatures and set design
+        info: Nasma Al-Shutfa
+      - layout: narrow
+        heading: Cinematographer and editor
+        info: Iztokk
+      - layout: narrow
+        heading: Sound design
+        info: Suzan van Eck
+      - layout: narrow
+        heading: Voice-over
+        subheading: Habib Rezai-De Keizer
+      - layout: narrow
+        heading: Translation
+        info: Ainaz Moghaddam, Habib Rezai-De Keizer
+      - layout: narrow
+        heading: Producer
+        info: Milena Mulders
+      - layout: narrow
+        heading: Consultant
+        info: Vincent Fitz-Jim
+      - layout: narrow
+        heading: "The voice-over was provided by Habib Rezai-De Keizer, based on
+          Haroon's story, which was recorded and filmed by Handan Tufan. "
+        info: Special thanks to Haroon.
 ---
