@@ -10,6 +10,14 @@ year: 2022
 date: 2025-12-10
 thumbnail: /uploads/i-am-grateful.jpg
 imageAlt: Exhibition images
+gallery:
+  - image: /uploads/nasma-alshutfa-royal-academy-of-art-i-am-grateful-2025-3.jpg.jpg
+  - image: /uploads/actual-rooms.jpg
+    caption: Actual rooms
+  - image: /uploads/paper-rooms.jpg
+    caption: Paper rooms
+  - image: /uploads/waiting-rooms.jpg
+    caption: Waiting rooms
 highlight: true
 projectDescription: >-
   Refugee centers are waiting rooms of a different kind. In the Netherlands,
