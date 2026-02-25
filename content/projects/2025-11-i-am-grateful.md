@@ -57,15 +57,81 @@ contentBlocks:
     heading: Different events
     cards:
       - layout: narrow
+        image: /uploads/3.jpg
+        heading: "Workshop 1 "
+        subheading: StoryTelling
+        info: >-
+          This first storytelling workshop served as an introductory gathering
+          for participants who are living or have lived in different refugee
+          centres. The session aimed to:
+
+          Build trust and create a safe environment.
+
+          Encourage participants to get to know one another.
+
+          Offer a day out and an opportunity to meet new people.
+
+          Provide space to share experiences and reduce feelings of isolation.
+
+          Introduce the project and allow participants to choose how they wish to be involved.
+
+          Begin collecting general insights into participants’ stories.
+
+          Help participants to position themselves within the project and decide what they feel comfortable sharing.
+      - layout: narrow
+        image: /uploads/20250617_124106.jpg
+        heading: Workshop 2
+        subheading: StoryTelling
+        info: >
+          In this session, we dove into the WHAT and HOW of personal stories,
+          focusing on life inside AZCs (asylum seeker centers). We asked
+          participants reflective questions — exploring both personal experience
+          and spatial imagination.
+
+          WHAT
+
+          What was the worst AZC you've stayed in — and why?
+
+          What problems do society never see?
+
+          What do you love/hate about your room?
+
+          What message do you want to share with the world — inside or outside the AZC?
+
+          What’s missing in your room, and what would you add?
+
+          HOW
+
+          Can you draw your room(s) and show where they sit within the AZC?
+
+          If you could design a room to express a feeling about the invisible borders, what would that feeling be — and why?
+
+          What if there were 5 rooms, each showing a border you experience — what would you name each one?
+      - layout: narrow
+        image: /uploads/for-web.jpg
+        info: It is important for the participants to be directly involved in building
+          their rooms, shaping the details, and ensuring that the space truly
+          reflects their ideas and experiences. This process helps them feel
+          connected to the room and grounded in it.
+        heading: "Workshop 3 "
+        subheading: Build up
+      - layout: wide
         image: /uploads/iamgrateful-highres_cr_paconúñez-27.jpg
-      - layout: narrow
-        image: /uploads/iamgrateful-highres_cr_paconúñez-29.jpg
-      - layout: narrow
-        image: /uploads/iamgrateful-highres_cr_paconúñez-19.jpg
-      - layout: narrow
-        image: /uploads/iamgrateful-highres_cr_paconúñez-46.jpg
+        info: >-
+          The opening event exceeded expectations, welcoming around 50 attendees
+          from across our network, including researchers, architects, artists,
+          and representatives from various institutions and organisations.
+
+          The programme began with a welcome speech by Imagine IC’s manager, Danielle Kuijten, followed by an introduction from Nasma Alshutfa as the project leader. Each member of the I Am Grateful team — Dona, Wafa, Ibtehal, Osman, Hadi, Hadir, Buthaina, and Samira — spoke about their role in the project, their emotions throughout the process, and the experiences they contributed. Their openness and enthusiasm created a warm and engaging atmosphere.
+
+          As the I Am Grateful team, we focused fully on guiding visitors through the installation and facilitating conversations around the work. Participants stood proudly beside their rooms, engaging in long, meaningful conversations with visitors. Seeing them speak with confidence and ownership was a powerful moment, affirming the project’s core aim: using spatial design as a tool for dialogue, storytelling, and shared understanding.
+
+          The event concluded with food and traditional music, creating a warm, communal atmosphere. It was a successful gathering both practically and emotionally — a moment of connection, listening, and celebration for everyone involved.
+        heading: Opening of I am Grateful (?!)
+        subheading: At Imagine IC
       - layout: narrow
         image: /uploads/iamgrateful-highres_cr_paconúñez-51.jpg
+        heading: Roundtable 1
       - layout: narrow
         image: /uploads/iamgrateful-highres_cr_paconúñez-69.jpg
   - type: grid
