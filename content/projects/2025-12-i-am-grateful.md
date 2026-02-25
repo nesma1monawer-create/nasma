@@ -138,4 +138,46 @@ contentBlocks:
 
           The session brings together different organisations — including SAWA, CIVIC, and Takecarebnb — as well as people with lived experience, to reflect collectively and translate those reflections into meaningful steps.
         heading: Roundtable 1
+  - type: grid
+    cardBackground: "#eeeeee"
+    heading: Project Team
+    cards:
+      - layout: narrow
+        image: /uploads/iamgrateful-highres_cr_paconúñez-14.jpg
+        heading: Dona Saroor
+        subheading: Narrative Community Facilitator
+      - layout: narrow
+        heading: "Wafa  Al-Attas "
+        subheading: Creative Producer
+        image: /uploads/iamgrateful-highres_cr_paconúñez-16.jpg
+      - layout: narrow
+        info: "\n"
+        heading: Hadi Zadeh
+        subheading: Barista and café management
+      - layout: narrow
+        heading: Buthina Osama
+        subheading: MBA
+      - layout: narrow
+        heading: Samira
+      - layout: narrow
+        info: ""
+        heading: " Ibtehal  Al-dholay "
+        subheading: Former Tv  presenter human rights activist
+      - layout: narrow
+        heading: "Hadir  "
+        subheading: Lawyer
+      - layout: narrow
+        heading: " Osman Mjd  "
+        subheading: Football player
+      - layout: narrow
+        heading: "Amal Adwan "
+        subheading: Cultural Mediator
+      - layout: narrow
+        heading: "Ali Jawad "
+        subheading: Multidisciplinary artist  and therapist
+      - layout: narrow
+        heading: Thanks to
+        info: |-
+          Michou de Bruijn, spatial designer
+          Kilian Kleinschmidt, Entrepreneur & former UNHCR official
 ---
