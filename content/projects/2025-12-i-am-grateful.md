@@ -50,15 +50,22 @@ contentBlocks:
 
       **Through co-created narratives and testimonies gathered from different AZCs around the Netherlands, *I am Grateful (?!)* makes the hidden visible. It gives form to the complex emotions of living in transit—where destinations are uncertain, control is lost, and comfort must always remain temporary.**
   - type: markdown
-    content: |-
-      About the Installation
-      I am Grateful (?!)
-      Actual Rooms
-      Paper Rooms
-      Waiting Rooms
-      Emotional Rooms
+    content: >-
+      **About the installation**
+
+
+      *I am Grateful (?!)* is an installation composed of 72 rooms, divided into four types: **Actual Rooms, Paper Rooms, Waiting Rooms, and Emotional Rooms.**
+
+
+      * **Actual rooms** are exact replicas of real rooms found in refugee centers across the Netherlands.
+
+      * **Paper rooms** reflect the constant flow of documents and forms from COA, VWN, and IND, alongside the evidence we gather from home. Our lives shift into a system defined by paperwork and mail, turning existence into a sequence of forms.
+
+      * **Waiting rooms** represent the long periods of uncertainty. During this time, waiting becomes the only constant — waiting for interviews, transfers, food, mail, and everything in between.
+
+      * **Emotional rooms** are created spaces that express the feelings experienced within the walls of refugee centers. How do spaces change through endless waiting? How do they reflect shifting emotions? How do they embody the psychological state of their inhabitants? What do spaces represent when they become part of a system of repetition?
   - type: grid
-    cardBackground: "#6366ac"
+    cardBackground: "#8d94c9"
     heading: Activities
     sectionInfo: Moments that inspire, challenge, and connect
     cards:
