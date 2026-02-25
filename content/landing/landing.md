@@ -7,14 +7,10 @@ sections:
     visible: true
     heading: Upcoming Events
     cards:
-      - text: I am Grateful (?) Round table at Imagine IC, Bijlmerplein 393, 1102 BP
-          Amsterdam
-        date: 2026-02-03
-        label: Tickets / Registration
-        url: "By email: nesma1monawer@gmail.com"
       - text: I am Grateful (?!) Iftar and closing event at Imagine IC, Bijlmerplein
           393, 1102 BP Amsterdam
         date: 2026-02-27
+        label: https://forms.gle/KA5LRCaiu2SnrPS17
   - type: highlighted
     background: "#6366ac"
     visible: true
