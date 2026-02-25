@@ -49,8 +49,16 @@ contentBlocks:
 
 
       **Through co-created narratives and testimonies gathered from different AZCs around the Netherlands, *I am Grateful (?!)* makes the hidden visible. It gives form to the complex emotions of living in transit—where destinations are uncertain, control is lost, and comfort must always remain temporary.**
+  - type: markdown
+    content: |-
+      About the Installation
+      I am Grateful (?!)
+      Actual Rooms
+      Paper Rooms
+      Waiting Rooms
+      Emotional Rooms
   - type: grid
-    cardBackground: "#eeeeee"
+    cardBackground: "#6366ac"
     heading: Activities
     sectionInfo: Moments that inspire, challenge, and connect
     cards:
@@ -139,7 +147,7 @@ contentBlocks:
           The session brings together different organisations — including SAWA, CIVIC, and Takecarebnb — as well as people with lived experience, to reflect collectively and translate those reflections into meaningful steps.
         heading: Roundtable 1
   - type: grid
-    cardBackground: "#eeeeee"
+    cardBackground: "#f5c45c"
     heading: Project Team
     cards:
       - layout: narrow
@@ -177,7 +185,23 @@ contentBlocks:
         subheading: Multidisciplinary artist  and therapist
       - layout: narrow
         heading: Thanks to
-        info: |-
-          Michou de Bruijn, spatial designer
-          Kilian Kleinschmidt, Entrepreneur & former UNHCR official
+        info: "Kilian Kleinschmidt, Entrepreneur & former UNHCR official "
+        subheading: Michou de Bruijn, spatial designer
+    content: >-
+      **About the Installation**
+
+
+      *I am Grateful (?!)* is an installation composed of 72 rooms, divided into four types: **Actual Rooms, Paper Rooms, Waiting Rooms, and Emotional Rooms.**
+
+
+      **Actual Rooms** are exact replicas of real rooms found in refugee centers across the Netherlands.
+
+
+      **Paper Rooms** reflect the constant flow of documents and forms from COA, VWN, and IND, alongside the evidence we gather from home. Our lives shift into a system defined by paperwork and mail, turning existence into a sequence of forms.
+
+
+      **Waiting Rooms** represent the long periods of uncertainty. During this time, waiting becomes the only constant — waiting for interviews, transfers, food, mail, and everything in between.
+
+
+      **Emotional Rooms** are created spaces that express the feelings experienced within the walls of refugee centers. How do spaces change through endless waiting? How do they reflect shifting emotions? How do they embody the psychological state of their inhabitants? What do spaces represent when they become part of a system of repetition?
 ---
