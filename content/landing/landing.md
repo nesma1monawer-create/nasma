@@ -7,13 +7,11 @@ sections:
     visible: true
     heading: Upcoming Events
     cards:
-      - text: >-
-          I am Grateful (?!) Iftar and closing event at Imagine IC, Bijlmerplein
+      - text: I am Grateful (?!) Iftar and closing event at Imagine IC, Bijlmerplein
           393, 1102 BP Amsterdam
-
-          Free register: https://forms.gle/KA5LRCaiu2SnrPS17
         date: 2026-02-27
         label: https://forms.gle/KA5LRCaiu2SnrPS17
+        url: https://forms.gle/KA5LRCaiu2SnrPS17
   - type: highlighted
     background: "#6366ac"
     visible: true
