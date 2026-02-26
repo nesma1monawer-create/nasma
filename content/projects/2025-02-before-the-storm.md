@@ -3,11 +3,11 @@ layout: _pages/project_page.njk
 headerLayout: medium
 title: Before the storm
 subtitle: ""
-info: BEFORE THE STORM is a collaborative project by MOHA, created with a
-  working group of local residents and creatives. Together, they explored the
-  skills, strategies, and forms of resilience people use when facing their own
-  personal storms. These insights were transformed into communal tools and
-  poetic gestures that visitors can engage with and take home.
+info: A collaborative project by MOHA, created with a working group of local
+  residents and creatives. Together, they explored the skills, strategies, and
+  forms of resilience people use when facing their own personal storms. These
+  insights were transformed into communal tools and poetic gestures that
+  visitors can engage with and take home.
 year: 2025
 date: 2025-03-01
 thumbnail: /uploads/moha-bts-960x.jpg
@@ -55,4 +55,15 @@ contentBlocks:
 
 
       And how do you manage to get through it?
+  - type: grid
+    cardBackground: "#5e7b3d"
+    heading: Team
+    cards:
+      - layout: narrow
+        heading: MOHA
+        info: Alice Pons, Olivia Reschofsky and Wafa Al-Attas
+      - layout: narrow
+        info: Hadir, Hermano, Huda Al-Attas, Iman, Marjorie Richards, Meada, Nesma
+          Al-Shutfa, Sjoerd Vocking and Yahia Ahmad
+        heading: Local residents and Creatives
 ---
