@@ -7,11 +7,10 @@ sections:
     visible: true
     heading: Upcoming Events
     cards:
-      - text: I am Grateful (?!) Iftar and closing event at Imagine IC, Bijlmerplein
-          393, 1102 BP Amsterdam
-        date: 2026-02-27
-        label: https://forms.gle/KA5LRCaiu2SnrPS17
-        url: https://forms.gle/KA5LRCaiu2SnrPS17
+      - text: "Join us at De Balie: I am Grateful (?!) — exhibited until 1 May"
+        date: ""
+        label: https://debalie.nl/expositie/i-am-grateful/
+        url: https://debalie.nl/expositie/i-am-grateful/
   - type: highlighted
     background: "#6366ac"
     visible: true
