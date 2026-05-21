@@ -10,8 +10,8 @@ sections:
       - text: "Join us at SIGN art space, Groningen: I am Grateful (?!) — exhibited from
           30May to 21June"
         date: ""
-        label: sign2.nl/websign/events/nasma-alshutfa-i-am-grateful/
-        url: sign2.nl/websign/events/nasma-alshutfa-i-am-grateful/
+        label: sign2.nl/nasma-alshutfa-i-am-grateful
+        url: sign2.nl/nasma-alshutfa-i-am-grateful
   - type: highlighted
     background: "#6366ac"
     visible: true
