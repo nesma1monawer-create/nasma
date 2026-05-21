@@ -22,13 +22,15 @@ gallery:
   - image: /uploads/504476916_18281262145255271_498431099652265456_n.jpg
   - image: /uploads/504838723_18281262202255271_2734533592611888022_n.jpg
 highlight: true
-projectDescription: A collaborative project by MOHA, created with a working
-  group of local residents and creatives. Together, they explored the skills,
-  strategies, and forms of resilience people use when facing their own personal
-  storms. These insights were transformed into communal tools and poetic
-  gestures that visitors can engage with and take home.
+projectDescription: ""
 visible: true
 contentBlocks:
+  - type: markdown
+    content: A collaborative project by MOHA, created with a working group of local
+      residents and creatives. Together, they explored the skills, strategies,
+      and forms of resilience people use when facing their own personal storms.
+      These insights were transformed into communal tools and poetic gestures
+      that visitors can engage with and take home.
   - type: markdown
     content: >-
       **The Storm** 
@@ -67,4 +69,9 @@ contentBlocks:
         info: Hadir, Hermano, Huda Al-Attas, Iman, Marjorie Richards, Meada, Nesma
           Al-Shutfa, Sjoerd Vocking and Yahia Ahmad
         heading: Local residents and Creatives
+    content: A collaborative project by MOHA, created with a working group of local
+      residents and creatives. Together, they explored the skills, strategies,
+      and forms of resilience people use when facing their own personal storms.
+      These insights were transformed into communal tools and poetic gestures
+      that visitors can engage with and take home.
 ---
