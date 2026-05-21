@@ -21,7 +21,7 @@ gallery:
   - image: /uploads/504570336_18281262229255271_4852085070518936361_n.jpg
   - image: /uploads/504476916_18281262145255271_498431099652265456_n.jpg
   - image: /uploads/504838723_18281262202255271_2734533592611888022_n.jpg
-highlight: true
+highlight: false
 projectDescription: ""
 visible: true
 contentBlocks:
