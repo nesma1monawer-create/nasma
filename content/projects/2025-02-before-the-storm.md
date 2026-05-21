@@ -3,11 +3,7 @@ layout: _pages/project_page.njk
 headerLayout: medium
 title: Before the storm
 subtitle: ""
-info: A collaborative project by MOHA, created with a working group of local
-  residents and creatives. Together, they explored the skills, strategies, and
-  forms of resilience people use when facing their own personal storms. These
-  insights were transformed into communal tools and poetic gestures that
-  visitors can engage with and take home.
+info: ""
 year: 2025
 date: 2025-03-01
 thumbnail: /uploads/moha-bts-960x.jpg
@@ -25,7 +21,12 @@ gallery:
   - image: /uploads/504570336_18281262229255271_4852085070518936361_n.jpg
   - image: /uploads/504476916_18281262145255271_498431099652265456_n.jpg
   - image: /uploads/504838723_18281262202255271_2734533592611888022_n.jpg
-highlight: false
+highlight: true
+projectDescription: A collaborative project by MOHA, created with a working
+  group of local residents and creatives. Together, they explored the skills,
+  strategies, and forms of resilience people use when facing their own personal
+  storms. These insights were transformed into communal tools and poetic
+  gestures that visitors can engage with and take home.
 visible: true
 contentBlocks:
   - type: markdown
