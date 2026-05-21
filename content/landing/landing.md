@@ -7,10 +7,11 @@ sections:
     visible: true
     heading: Upcoming Events
     cards:
-      - text: "Join us at De Balie: I am Grateful (?!) — exhibited until 1 May"
+      - text: "Join us at SIGN art space, Groningen: I am Grateful (?!) — exhibited from
+          30May to 21June"
         date: ""
-        label: https://debalie.nl/expositie/i-am-grateful/
-        url: https://debalie.nl/expositie/i-am-grateful/
+        label: https://sign2.nl/websign/events/nasma-alshutfa-i-am-grateful/
+        url: https://sign2.nl/websign/events/nasma-alshutfa-i-am-grateful/
   - type: highlighted
     background: "#6366ac"
     visible: true
