@@ -20,11 +20,15 @@ gallery:
   - image: /uploads/dsc02424.jpg
   - image: /uploads/dsc02425.jpg
 highlight: false
-projectDescription: At Crossing Horizons, we highlight the strength and
-  creativity of female newcomer artists in the Netherlands through immersive
-  exhibitions, installations, and public dialogues. Founded by creative producer
-  and social entrepreneur Wafa Al-Attas, we challenge stereotypes, rethink the
-  language of “integration,” and create spaces where newcomers are recognized
-  not as guests, but as neighbours, colleagues, and co-creators of society.
+projectDescription: ""
 visible: true
+contentBlocks:
+  - type: markdown
+    content: At Crossing Horizons, we highlight the strength and creativity of
+      female newcomer artists in the Netherlands through immersive exhibitions,
+      installations, and public dialogues. Founded by creative producer and
+      social entrepreneur Wafa Al-Attas, we challenge stereotypes, rethink the
+      language of “integration,” and create spaces where newcomers are
+      recognized not as guests, but as neighbours, colleagues, and co-creators
+      of society.
 ---
