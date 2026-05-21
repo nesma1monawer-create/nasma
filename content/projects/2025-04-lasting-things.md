@@ -19,11 +19,13 @@ gallery:
   - image: /uploads/shared-from-lightroom-mobile-1-.jpg
   - image: /uploads/shared-from-lightroom-mobile.jpg
   - image: /uploads/pxl_20251212_154440307.raw-02.original.jpg
-highlight: true
-projectDescription: Objects are never just things. A photo, a key, or a notebook
-  carries memories, loss, and hope that often cannot be captured in words.
+highlight: false
+projectDescription: ""
 visible: true
 contentBlocks:
+  - type: markdown
+    content: Objects are never just things. A photo, a key, or a notebook carries
+      memories, loss, and hope that often cannot be captured in words.
   - type: markdown
     content: >-
       Objects are never just things. A photo, a key, or a notebook carries
@@ -77,4 +79,6 @@ contentBlocks:
         heading: "The voice-over was provided by Habib Rezai-De Keizer, based on
           Haroon's story, which was recorded and filmed by Handan Tufan. "
         info: Special thanks to Haroon.
+    content: Objects are never just things. A photo, a key, or a notebook carries
+      memories, loss, and hope that often cannot be captured in words.
 ---
