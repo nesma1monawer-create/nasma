@@ -2,8 +2,7 @@
 layout: _pages/project_page.njk
 headerLayout: medium
 title: Lasting things
-info: Objects are never just things. A photo, a key, or a notebook carries
-  memories, loss, and hope that often cannot be captured in words.
+info: ""
 year: 2025
 date: 2025-05-01
 thumbnail: /uploads/web-5.jpg
@@ -20,7 +19,9 @@ gallery:
   - image: /uploads/shared-from-lightroom-mobile-1-.jpg
   - image: /uploads/shared-from-lightroom-mobile.jpg
   - image: /uploads/pxl_20251212_154440307.raw-02.original.jpg
-highlight: false
+highlight: true
+projectDescription: Objects are never just things. A photo, a key, or a notebook
+  carries memories, loss, and hope that often cannot be captured in words.
 visible: true
 contentBlocks:
   - type: markdown
