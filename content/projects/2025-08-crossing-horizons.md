@@ -5,7 +5,7 @@ title: Crossing Horizons
 info: ""
 year: 2025
 date: 2025-09-01
-thumbnail: /uploads/dsc07003.jpg
+thumbnail: /uploads/crossing.jpg
 imageAlt: crossing horizons
 gallery:
   - image: /uploads/dsc01933.jpg
