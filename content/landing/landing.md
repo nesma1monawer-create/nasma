@@ -4,14 +4,9 @@ layout: _pages/index.njk
 sections:
   - type: events
     background: "#a7c7e4"
-    visible: false
+    visible: true
     heading: Upcoming Events
-    cards:
-      - text: "Join us at SIGN art space, Groningen: I am Grateful (?!) — exhibited from
-          30May to 21June"
-        date: ""
-        label: sign2.nl/nasma-alshutfa-i-am-grateful
-        url: sign2.nl/nasma-alshutfa-i-am-grateful
+    cards: []
   - type: highlighted
     background: "#6366ac"
     visible: true
