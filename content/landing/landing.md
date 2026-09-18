@@ -4,7 +4,7 @@ layout: _pages/index.njk
 sections:
   - type: events
     background: "#a7c7e4"
-    visible: true
+    visible: false
     heading: Upcoming Events
     cards: []
   - type: highlighted
